@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="https://freehtmlthemes.ru/" />
+<title>Как задать фон страницы, картинка в качестве фона для сайта</title>
+<meta name="description" content="В этой статье рассказывается о том, как в качестве фона использовать изображения, цвета. Как фиксить фон и задавать его позиционирование, размер, растягивать фон на всю ширину и высоту блока или страницы.">
+<meta name="keywords" content="Урок 11. Фон сайта с помощью CSS. Свойство background">
+
+<!-- Favicons Icon -->
+<link rel="apple-touch-icon" sizes="57x57" href="assets/fav/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="assets/fav/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="assets/fav/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="assets/fav/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="assets/fav/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="assets/fav/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="assets/fav/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="assets/fav/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/fav/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="assets/fav/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/fav/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/fav/favicon-16x16.png">
+<link rel="shortcut icon" href="assets/fav/favicon.ico" type="image/x-icon">
+<link rel="manifest" href="assets/fav/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="assets/fav/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!-- Mobile Specific -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="yandex-verification" content="aa71dccedcb105a2" />
+<meta name="google-site-verification" content="Im0bvqpm19i8GuQEcAq_VgWNQB9HrJlIzNhJtMmsYyw" />
+<!-- CSS Style -->
+<!--<link rel="stylesheet" href="assets/css/animate.css" type="text/css">-->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+<link href="assets/css/style.css?af599b30f8892fe014637288e05c32c3" rel="stylesheet">
+<link href='https://yastatic.net/highlightjs/8.2/styles/solarized_light.min.css' rel='stylesheet'/>
+<script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script>
+<!-- Google Fonts -->
+
+<script data-ad-client="ca-pub-1157752767752980" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <meta property="og:image" content="assets/images/articles/css-fon.jpg" />
+    <link rel="stylesheet" href="assets/css/blogmate.css?ca2e284b20e4a631add50d6a02cff01d" type="text/css">
+<link rel="stylesheet" href="/assets/components/likedislike/css/styles.css" type="text/css" />
+<link rel="stylesheet" href="/assets/components/ajaxform/css/default.css" type="text/css" />
+</head>
+<body class="cms-index-index">
+    <div class="page"> 
+         <!-- Header -->
+  <header class="header-container">
+   <div class="header-top">
+       <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                   <span>Бесплатные шаблоны для вашего сайта, в свободном доступе</span> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 col-md-6"> 
+          <!-- Header Logo -->
+          <a class="logo" title="" href="/"><img src="/assets/images/logo-new.png" alt="Шаблоны сайта картинка"><div>Бесплатные шаблоны сайтов, современные и стильные</div></a>
+          <!-- End Header Logo --> 
+        </div>
+        <div class="col-lg-5 col-sm-6 col-md-6"> 
+          <!-- Search-col -->
+          <div class="search-box pull-right">
+            <form class="sisea-search-form" id="search_mini_form" action="search-result" method="get"> 
+<input type="text" placeholder="Поиск" value="" maxlength="70" name="search" id="search"/>   
+<input type="hidden" name="id" value="4" />
+<button type="submit" class="btn btn-default  search-btn-bg" value="Поиск"> <span class="glyphicon glyphicon-search"></span>&nbsp;</button> 
+</form>
+
+          </div>
+          <!-- End Search-col --> 
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-6"> 
+        <div class="donate first-donate">
+                    <div class="title">Помогите проекту</div>
+                    <div class="share-img"><img src="assets/images/cat.jpg" alt="Кот хочет кушать!"> </div>
+                    <iframe src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&amp;targets=%D0%9D%D0%B0%20%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%2C%20%D0%BF%D0%B8%D0%B2%D0%BE%20%D0%B8%20%D0%BA%D0%BE%D1%88%D0%B0%D1%87%D0%B8%D0%B9%20%D0%BA%D0%BE%D1%80%D0%BC%20%3A)&amp;targets-hint=&amp;default-sum=300&amp;button-text=13&amp;payment-type-choice=on&amp;hint=&amp;successURL=&amp;quickpay=shop&amp;account=410018913613606" width="100%" height="222" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+                    
+                </div>
+          <a class="button btn-top btn-donate" href="#">Помочь проекту</a>
+          <a class="button btn-top" target="_blank" href="https://timeweb.com/ru/?i=38493">Купить хостинг</a>
+           
+        </div>
+      </div>
+      <br/>
+    </div>
+  </header>
+  <!-- end header --> 
+          <!-- Navbar -->
+  <nav>
+    <div class="container">
+      <div class="nav-inner"> 
+        <!-- mobile-menu -->
+        <div class="hidden-desktop" id="mobile-menu">
+          <ul class="navmenu">
+            <li>
+              <div class="menutop">
+                <div class="toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></div>
+                <h2>Меню</h2>
+              </div>
+              <ul style="display:none;" class="submenu">
+    <li>
+      <ul class="topnav"><li  class="level-top level0 first"><a href="https://freehtmlthemes.ru/"><span>Главная</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/"><span>Категории</span></a><ul class="level1" style="display: none;"><li  class="level-top level0 first parent"><a href="categories/auto/"><span>Автомобили, мотоциклы, транспортные компании</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/business/"><span>Бизнес и услуги</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/blog/"><span>Блог</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/design/"><span>Дизайн, фото, видео</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/food/"><span>Еда, рестораны, кафе</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/animals/"><span>Животные</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/interior/"><span>Архитектура, интерьер и мебель</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/art/"><span>Искусство, музыка, театр, кино, музеи</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/beauty/"><span>Красота, здоровье и спа</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/medicine/"><span>Медицина</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/realty/"><span>Недвижимость</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/news/"><span>Новости</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/obrazovanie/"><span>Образование</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/people/"><span>Общество и люди</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/clothes/"><span>Одежда и мода</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/hotel/"><span>Отели, гостиницы, хостелы</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/portfolio/"><span>Портфолио, личная страница, персональный сайт</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/prazdniki/"><span>Праздники и события</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/sport/"><span>Спорт</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/construction/"><span>Строительство</span></a></li>
+
+<li  class="level-top level0 parent"><a href="categories/tourism/"><span>Туризм и путешествия</span></a></li>
+
+<li  class="level-top level0 last parent"><a href="categories/web/"><span>Web, компьютеры, хостинг, приложения</span></a></li>
+
+</ul></li>
+
+<li  class="level-top level0 parent"><a href="templates/"><span>Шаблоны</span></a><ul class="level1" style="display: none;"><li  class="level-top level0 first parent"><a href="templates/adaptive/"><span>Адаптивные шаблоны</span></a></li>
+
+<li  class="level-top level0 parent"><a href="templates/free/"><span>Бесплатные</span></a></li>
+
+<li  class="level-top level0 parent"><a href="templates/ecommerce/"><span>Для интернет-магазинов</span></a></li>
+
+<li  class="level-top level0 parent"><a href="templates/landing-page/"><span>Шаблоны Landing page</span></a></li>
+
+<li  class="level-top level0 parent"><a href="templates/email/"><span>E-mail шаблоны</span></a></li>
+
+<li  class="level-top level0"><a href="templates/bootstrap"><span>Bootstrap шаблоны</span></a></li>
+
+<li  class="level-top level0 parent"><a href="templates/wordpress/"><span>Wordpress</span></a></li>
+
+<li  class="level-top level0 last parent"><a href="templates/soming-soon/"><span>Шаблоны Coming soon</span></a></li>
+
+</ul></li>
+
+<li  class="level-top level0 parent"><a href="best-templates/"><span>Платные</span></a><ul class="level1" style="display: none;"><li  class="level-top level0 first"><a href="best-templates/wordpress"><span>Шаблоны для Wordpress</span></a></li>
+
+<li  class="level-top level0 parent"><a href="best-templates/ecommerce/"><span>Шаблоны для Интернет-магазина</span></a></li>
+
+<li  class="level-top level0"><a href="best-templates/joomla"><span>Шаблоны Joomla</span></a></li>
+
+<li  class="level-top level0"><a href="best-templates/drupal"><span>Шаблоны для Drupal</span></a></li>
+
+<li  class="level-top level0"><a href="best-templates/psd"><span>PSD шаблоны</span></a></li>
+
+<li  class="level-top level0 last"><a href="best-templates/e-mail"><span>Шаблоны e-mail рассылок</span></a></li>
+
+</ul></li>
+
+<li  class="level-top level0"><a href="about"><span>О нас</span></a></li>
+
+<li  class="level-top level0"><a href="help"><span>Обратная связь</span></a></li>
+
+<li  class="level-top level0 parent active"><a href="blog/"><span>Блог</span></a><ul class="level1" style="display: none;"><li  class="level-top level0 first parent active"><a href="blog/uroki-verstki/"><span>Уроки верстки для начинающих</span></a></li>
+
+</ul></li>
+
+<li  class="level-top level0 last"><a href="price"><span>Заказать сайт</span></a></li>
+
+ </ul>
+    </li>
+  </ul>
+            </li>
+          </ul>
+          <!--navmenu--> 
+        </div>
+        
+        <!--End mobile-menu -->
+        <ul id="nav" class="hidden-xs"><li  class="drop-menu level0 first"><a href="https://freehtmlthemes.ru/"><span>Главная</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/"><span>Категории</span></a><ul class="level1" style="display: none;"><li  class="drop-menu level0 first parent"><a href="categories/auto/"><span>Автомобили, мотоциклы, транспортные компании</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/business/"><span>Бизнес и услуги</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/blog/"><span>Блог</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/design/"><span>Дизайн, фото, видео</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/food/"><span>Еда, рестораны, кафе</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/animals/"><span>Животные</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/interior/"><span>Архитектура, интерьер и мебель</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/art/"><span>Искусство, музыка, театр, кино, музеи</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/beauty/"><span>Красота, здоровье и спа</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/medicine/"><span>Медицина</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/realty/"><span>Недвижимость</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/news/"><span>Новости</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/obrazovanie/"><span>Образование</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/people/"><span>Общество и люди</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/clothes/"><span>Одежда и мода</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/hotel/"><span>Отели, гостиницы, хостелы</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/portfolio/"><span>Портфолио, личная страница, персональный сайт</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/prazdniki/"><span>Праздники и события</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/sport/"><span>Спорт</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/construction/"><span>Строительство</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="categories/tourism/"><span>Туризм и путешествия</span></a></li>
+
+<li  class="drop-menu level0 last parent"><a href="categories/web/"><span>Web, компьютеры, хостинг, приложения</span></a></li>
+
+</ul></li>
+
+<li  class="drop-menu level0 parent"><a href="templates/"><span>Шаблоны</span></a><ul class="level1" style="display: none;"><li  class="drop-menu level0 first parent"><a href="templates/adaptive/"><span>Адаптивные шаблоны</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="templates/free/"><span>Бесплатные</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="templates/ecommerce/"><span>Для интернет-магазинов</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="templates/landing-page/"><span>Шаблоны Landing page</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="templates/email/"><span>E-mail шаблоны</span></a></li>
+
+<li  class="drop-menu level0"><a href="templates/bootstrap"><span>Bootstrap шаблоны</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="templates/wordpress/"><span>Wordpress</span></a></li>
+
+<li  class="drop-menu level0 last parent"><a href="templates/soming-soon/"><span>Шаблоны Coming soon</span></a></li>
+
+</ul></li>
+
+<li  class="drop-menu level0 parent"><a href="best-templates/"><span>Платные</span></a><ul class="level1" style="display: none;"><li  class="drop-menu level0 first"><a href="best-templates/wordpress"><span>Шаблоны для Wordpress</span></a></li>
+
+<li  class="drop-menu level0 parent"><a href="best-templates/ecommerce/"><span>Шаблоны для Интернет-магазина</span></a></li>
+
+<li  class="drop-menu level0"><a href="best-templates/joomla"><span>Шаблоны Joomla</span></a></li>
+
+<li  class="drop-menu level0"><a href="best-templates/drupal"><span>Шаблоны для Drupal</span></a></li>
+
+<li  class="drop-menu level0"><a href="best-templates/psd"><span>PSD шаблоны</span></a></li>
+
+<li  class="drop-menu level0 last"><a href="best-templates/e-mail"><span>Шаблоны e-mail рассылок</span></a></li>
+
+</ul></li>
+
+<li  class="drop-menu level0"><a href="about"><span>О нас</span></a></li>
+
+<li  class="drop-menu level0"><a href="help"><span>Обратная связь</span></a></li>
+
+<li  class="drop-menu level0 parent active"><a href="blog/"><span>Блог</span></a><ul class="level1" style="display: none;"><li  class="drop-menu level0 first parent active"><a href="blog/uroki-verstki/"><span>Уроки верстки для начинающих</span></a></li>
+
+</ul></li>
+
+<li  class="drop-menu level0 last"><a href="price"><span>Заказать сайт</span></a></li>
+
+</ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end nav --> 
+        <!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+      <div class="row"> <ul><li><a href="/">Главная</a></li><li><span>&raquo;</span></li><li><a href="blog/">Блог</a></li><li><span>&raquo;</span></li><li><a href="blog/uroki-verstki/">Уроки верстки для начинающих</a></li><li><span>&raquo;</span></li><li><strong>Урок 11. Фон сайта с помощью CSS. Свойство background</strong></li></ul></div>
+    </div>
+</div>
+        
+        <!-- main-container -->
+        <div class="main-container col2-right-layout">
+            <div class="main container">
+                <div class="row">
+                    <section class="col-main col-sm-9 col-xs-12 wow bounceInUp animated">
+                        <article class="blog_entry clearfix" id="post-29">
+                          <header class="blog_entry-header clearfix">
+                            <div class="blog_entry-header-inner">
+                              <h1>Урок 11. Фон сайта с помощью CSS. Свойство background</h1>
+                            </div>
+                            <!-- Yandex.RTB R-A-251896-3 -->
+                            <div id="yandex_rtb_R-A-251896-3"></div>
+                            <script type="text/javascript">
+                                (function(w, d, n, s, t) {
+                                    w[n] = w[n] || [];
+                                    w[n].push(function() {
+                                        Ya.Context.AdvManager.render({
+                                            blockId: "R-A-251896-3",
+                                            renderTo: "yandex_rtb_R-A-251896-3",
+                                            async: true
+                                        });
+                                    });
+                                    t = d.getElementsByTagName("script")[0];
+                                    s = d.createElement("script");
+                                    s.type = "text/javascript";
+                                    s.src = "//an.yandex.ru/system/context.js";
+                                    s.async = true;
+                                    t.parentNode.insertBefore(s, t);
+                                })(this, this.document, "yandexContextAsyncCallbacks");
+                            </script><br/>
+                            <!--blog_entry-header-inner--> 
+                          </header>
+                          <!--blog_entry-header clearfix-->
+                          <div class="entry-content">
+                            <div class="featured-thumb"><img alt="blog-img4" src="assets/images/articles/css-fon.jpg"></div>
+                            <br/>
+                            <div class="entry-content">
+                                
+                                <p>Чтобы придать любой html-странице свой стиль и индивидуальность, активно используют фоны для элементов и страницы в целом. За этот момент оформления отвечает целый раздел css-свойства, которые начинаются со слова <strong>background</strong>.</p>
+<h2>Как задать цвет и изображение фона сайта</h2>
+<p>Для задания цвета фона используют свойство <strong><em>background-color</em></strong>, оно принимает значения в шестнадцатеричном формате цвета, в формате RGB, задание цвета при помощи ключевых слов.</p>
+<p>Чтобы использовать в качестве фона сайта изображения, применяют свойство <strong><em>background-image</em></strong>, где указывают ссылку на файл. Можно использовать одновременно и вариант с цветом фона, и с изображением. Тогда изображение накладывается поверх фона определенного цвета.</p>
+<p>Теперь поговорим о том, как регулировать повторение фонового изображения, как растянуть его на весь экран и т.д. Свойство, которое отвечает за повтор фона, называется <em><strong>background-repeat</strong></em>. Оно принимает четыре значения. В качестве значения по умолчанию принимается repeat (повторять по вертикали и горизонтали). Три других значения:</p>
+<ul>
+<li>repeat-x - повторяет изображение по горизонтали</li>
+<li>repeat-y - повторяет изображение по вертикали</li>
+<li>no-repeat - не повторяет изображение совсем</li>
+</ul>
+<p>Для задания размера фонового изображения сайта используют свойство <strong><em>background-size</em></strong>, оно принимает значения в процентах, пикселях и слово auto. Имеет два значения через пробел. Первое значение отвечает за растяжение по горизонтали, второе по вертикали. Если первое значение задано (например, 100%), а второе значение выставлено auto, то фон по горизонтали растянется на весь размер блока, а по вертикали подгоняет высоту для данной ширины. Есть еще два значения для этого свойства (cover и contain). Cover изменяет размеры изображения так, чтобы блок был полностью закрыт картинкой, а contain так, чтобы картинка поместилась в блок целиком. Cover и contain задаются по одному, через пробел уже ничего писать не нужно.</p>
+<p>Пример. Зададим цвет фона, его изображение без повтора и растянем его по ширине и высоте:</p>
+<pre><code>.block {<br /> background-color: #eee;<br /> background-image: url("/assets/img/image.png");<br /> background-repeat: no-repeat;<br /> background-size: 100% 100%;<br />}</code></pre>
+<h3>Положение фонового изображения, background-position</h3>
+<p>Немного подробнее остановимся на работе с фоновым изображением, которое не нужно повторять. Для регулирования нахождения этого изображения внутри блока, которому мы задаем фон, используется CSS-свойство <em><strong>background-position</strong></em>. Это свойство принимает два значения через пробел. Первое определяет положение по оси x (горизонтали), второе по оси y (вертикали).</p>
+<p>Единицы измерения этих двух величин проценты и пиксели. Еще они принимают значения top, bottom, left, right, center. Значения для оси x, естественно, left, right, center. Значения для оси y - top, bottom, center. Единицы измерения, значения, пиксели и проценты можно комбинировать между собой в произвольном формате. В примере ниже зададим позиции для фонового изображения. В первом случае будет изображение по центру в процентах. Во втором случае изображение в правом нижнем углу блока. В третьем случает изображение сдвинуто на 50 пикселей слева и на 100 пикселей сверху. Пример:</p>
+<pre><code>.block1 {background-position: 50% 50%;}<br />.block2 {background-position: right bottom;}<br />.block3 {background-position: 50px 100px;}</code></pre>
+<h3>Фиксим фонового изображения, background-attachment</h3>
+<p>Иногда для создания визуальных эффектов нужно, чтобы фон при прокрутки не уезжал вместе с просмотренной частью страницы, а оставался на месте. Это будет создавать интересный эффект параллакса.</p>
+<p>Для фиксации фона используется css-свойство<em><strong> background-attachement</strong></em>. Оно принимает два значения, scroll - значение по умолчанию, прокрутка вместе со всем остальным содержимым, fixed - фон остается на месте при прокрутке.</p>
+<h2>CSS-свойство background</h2>
+<p>Чтобы обобщить все вышеперечисленные громоздкие конструкции в CSS есть свойства для их объединения, <em><strong>background</strong></em>. Оно имеет следующую структуру <em><strong>background: background-color background-image background-repeat background-position  background-attachement; </strong></em>Все значения этих свойств перечисляются через пробел. Если заданы не все свойства, то они имеют значения по умолчанию. Например:</p>
+<pre><code>.block {<br />background: #eee url("/assets/img/image.png") center center;<br />}</code></pre>
+                            </div>
+                          </div>
+                        <script type="text/javascript"><!--
+                        document.write(VK.Share.button(false,{type: "round", text: "Поделиться"}));
+                        --></script></br>
+                          <footer class="entry-meta">Дата публикации: <time datetime="2018-01-24" class="entry-date">24.01.2018</time>. </footer>
+                           <br/><!-- New -->
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-1157752767752980"
+                                 data-ad-slot="8167863391"
+                                 data-ad-format="auto"></ins>
+                            <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>  <br/>
+                        <div class="neighbors"><a class="btn prev" href="/blog/uroki-verstki/oformlenie-teksta">&larr; Урок 10. Оформление текста. Что нужно знать о верстке текста</a><a class="btn next" href="/blog/uroki-verstki/chto-takoj-css-sprajtyi">Урок 12. Что такой CSS-спрайты, сервисы и генераторы спрайтов &rarr;</a></div><div class="up"><a class="btn up" href="/blog/uroki-verstki/">Вернуться в Статьи</a></div>
+                        </article>
+                    </section>
+                    <div class="product-img-box col-sm-3 col-xs-12">
+                   <!-- Yandex.RTB R-A-251896-1 -->
+                    <div id="yandex_rtb_R-A-251896-1"></div>
+                    <script type="text/javascript">
+                        (function(w, d, n, s, t) {
+                            w[n] = w[n] || [];
+                            w[n].push(function() {
+                                Ya.Context.AdvManager.render({
+                                    blockId: "R-A-251896-1",
+                                    renderTo: "yandex_rtb_R-A-251896-1",
+                                    async: true
+                                });
+                            });
+                            t = d.getElementsByTagName("script")[0];
+                            s = d.createElement("script");
+                            s.type = "text/javascript";
+                            s.src = "//an.yandex.ru/system/context.js";
+                            s.async = true;
+                            t.parentNode.insertBefore(s, t);
+                        })(this, this.document, "yandexContextAsyncCallbacks");
+                    </script>
+                    <br/>
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Главная -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-1157752767752980"
+                         data-ad-slot="5623544464"
+                         data-ad-format="auto"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                    <br/>
+                    <a target="_new" href="https://timeweb.com/ru/?i=38493&a=79"><img style="border:0px;" src="https://wm.timeweb.ru/images/posters/240x100/240x100-1.gif"></a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!--End main-container --> 
+         <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-middle">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <h4>О нас</h4>
+            <div class="footer-logo"><div class="logo"><span>Free </span>Html Themes</div></div>
+            <p>На нашем сайте вы найдете большое количество современных html и psd шаблонов доступных для скачивания. Мы стараемся часто обновлять все разделы и подыскивать для Вас новые и интересные решения.</p>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-4">
+            <h4>Категории</h4>
+            <ul class="links"><li class="first"><a href="categories/auto/" title="Автомобили, мотоциклы, транспортные компании" >Автомобили, мотоциклы, транспортные компании</a></li>
+<li><a href="categories/business/" title="Бизнес и услуги" >Бизнес и услуги</a></li>
+<li><a href="categories/blog/" title="Блог" >Блог</a></li>
+<li><a href="categories/design/" title="Дизайн, фото, видео" >Дизайн, фото, видео</a></li>
+<li><a href="categories/food/" title="Еда, рестораны, кафе" >Еда, рестораны, кафе</a></li>
+<li><a href="categories/interior/" title="Архитектура, интерьер и мебель" >Архитектура, интерьер и мебель</a></li>
+<li class="last"><a href="categories/art/" title="Искусство, музыка, театр, кино, музеи" >Искусство, музыка, театр, кино, музеи</a></li>
+</ul>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-4">
+            <ul class="links"><li class="first"><a href="categories/beauty/" title="Красота, здоровье и спа" >Красота, здоровье и спа</a></li>
+<li><a href="categories/medicine/" title="Медицина" >Медицина</a></li>
+<li><a href="categories/realty/" title="Недвижимость" >Недвижимость</a></li>
+<li><a href="categories/obrazovanie/" title="Образование" >Образование</a></li>
+<li><a href="categories/clothes/" title="Одежда и мода" >Одежда и мода</a></li>
+<li><a href="categories/hotel/" title="Отели, гостиницы, хостелы" >Отели, гостиницы, хостелы</a></li>
+<li><a href="categories/sport/" title="Спорт" >Спорт</a></li>
+<li><a href="categories/tourism/" title="Туризм и путешествия" >Туризм и путешествия</a></li>
+<li class="last"><a href="categories/web/" title="Web, компьютеры, хостинг, приложения" >Web, компьютеры, хостинг, приложения</a></li>
+</ul>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4">
+            <h4>Информация</h4>
+            <ul class="links">
+              <li class="first"><a href="sitemap">Карта сайта</a></li>
+              <li><a href="about">О нас</a></li>
+              <li><a href="help" title="Contact Us">Связаться с нами</a></li>
+            </ul>
+            <!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=41324909&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/41324909/1_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:80px; height:15px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="41324909" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter41324909 = new Ya.Metrika({
+                    id:41324909,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/41324909" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-primary-bottom">
+      <div class="container">
+        <div class="row">
+         
+          <div class="col-md-12 col-sm-12 col-xs-12 block-subscribe">
+            <div class="newsletter">
+                <form action="" method="post">
+	<h4>
+		Подписаться на рассылку
+	</h4>
+	<input type="text" name="email" value="" placeholder="Email">
+
+	<input type="hidden" name="sx_action" value="subscribe">
+	<button class="subscribe" type="submit"><span>Подписаться</span></button>
+
+	
+</form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 coppyright"> &copy; 2016-2020 Free HTML Themes. Все права защищены.</div>
+            <div class="col-sm-6 col-xs-12 coppyright">
+                <!--LiveInternet counter--><script type="text/javascript">
+                document.write("<a href='//www.liveinternet.ru/click' "+
+                "target=_blank><img src='//counter.yadro.ru/hit?t25.6;r"+
+                escape(document.referrer)+((typeof(screen)=="undefined")?"":
+                ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+                ";"+Math.random()+
+                "' alt='' title='LiveInternet: показано число посетителей за"+
+                " сегодня' "+
+                "border='0' width='88' height='15'><\/a>")
+                </script><!--/LiveInternet-->
+            </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+<div class="helpinstall">
+<div class="title">Заявка на установку шаблона</div>
+<div class="close">x</div>
+<form action="" method="post" class="ajax_form af_example form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="af_name">Имя*</label>
+    <div class="controls">
+      <input type="text" id="af_name" name="name" value="" placeholder="Введите имя">
+      <span class="error_name"></span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="af_email">E-mail*</label>
+    <div class="controls">
+      <input type="email" id="af_email" name="email" value="" placeholder="Введите email">
+      <span class="error_email"></span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="af_message">Сообщение*</label>
+    <div class="controls">
+      <textarea id="af_message" name="message" rows="5"></textarea>
+      <span class="error_message"></span>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn btn-primary">Отправить</button>
+    </div>
+  </div>
+
+	<input type="hidden" name="af_action" value="484660e9ece59bf67a5386d300f68c9e" />
+</form></div>
+  <!-- End Footer --> 
+    </div>
+    <!-- JavaScript --> 
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script> 
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="assets/js/common.js?1737e814d70c003c60196d4ede8cfab2"></script> 
+<script type="text/javascript" src="assets/js/slider.js?70e0add4e6b2abf7ffffe077361cfb46"></script> 
+<script src='https://yastatic.net/highlightjs/8.2/highlight.min.js'/></script>
+<script type='text/javascript'>hljs.initHighlightingOnLoad();</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-35208500-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">var url_assets = "/assets/components/likedislike/"; var likedislike_ctx = "web";</script><script src="/assets/components/likedislike/js/web/likedislike.js"></script>
+<script type="text/javascript" src="/assets/components/ajaxform/js/default.js"></script>
+<script type="text/javascript">AjaxForm.initialize({"assetsUrl":"\/assets\/components\/ajaxform\/","actionUrl":"\/assets\/components\/ajaxform\/action.php","closeMessage":"\u0437\u0430\u043a\u0440\u044b\u0442\u044c \u0432\u0441\u0435","formSelector":"form.ajax_form","pageId":294});</script>
+</body>
+</html>

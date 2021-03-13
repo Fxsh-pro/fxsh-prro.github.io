@@ -1,0 +1,100 @@
+body {
+    background-image: url(img/112.jpg)
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 1500px;
+    overflow: hidden;
+    font-size: x-large;
+}
+.container{
+    height: 600px;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    color: rgb(224, 214, 214);
+    max-height: 30px;
+    max-width: 230px;
+    margin-top: 1%;
+    margin-left: 80%;
+    font-size: x-large;
+    outline: 4px solid black;
+
+}
+
+
+.intro {
+
+    max-width: 250px;
+    font-size: x-large;
+    margin-top: 6%;
+    margin-left: 1%;
+    line-height: 150%;
+    outline: 4px solid black;
+    float: left;
+}
+
+.intro .board {
+    outline: 2px solid black;
+}
+
+.case1 {
+    padding: 1%;
+}
+
+
+.forSchool {
+    margin-top: 6%;
+    display: inline-block;
+    min-width: 250px;
+    height: 300px;
+    outline: 4px solid black;
+    margin-left: 2%;
+}
+
+.forWho {
+    margin-left: 1%;
+    font-size: x-large;
+
+}
+
+.schPr {
+    margin-top: 1%;
+    text-align: center;
+
+}
+
+a {
+    text-decoration: none;
+    font-size: large;
+    color: blue;
+    display: block;
+}
+
+a:hover {
+    background-color: white;
+}
+
+.boarder {
+    outline: 2px solid black;
+    margin-top: 2%;
+}
+.others {
+    min-height: 500px;
+    margin-left: 40%;
+    max-width: 500px ;
+    margin-top: -21.4%;
+    outline: 4px solid black;
+    line-height: 140%;
+
+}
+.others a{
+    display: inline; 
+}
+.first,.second, .third{
+    font-size: large;
+}
